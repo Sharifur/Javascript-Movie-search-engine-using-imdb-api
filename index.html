@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Working With Rest Api | Movie Details</title>
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/responsive.css" rel="stylesheet">
+          
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-default navbar-static-top ">
+            <div class="container-fluid">
+                 <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".movie-info" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html">Movie Info </a>
+                </div>
+                <div class="collapse navbar-collapse movie-info">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="jumbotron">
+                <h3 class="text-center">Search For Any Movie</h3>
+                <form action="index.html" id="searchForm">
+                    <input type="text" class="form-control" id="searchText" placeholder="Search Movie From Here"/>
+
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div id="movies" class="row">
+                
+            </div>
+        </div>
+        <footer >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                         &copy; All Right Reserved By Sharifur Rahman 2017
+                    </div>
+                </div>
+            </div>
+           
+        </footer>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/axios.min.js"></script>\
+        <script src="assets/js/main.js"></script>
+       <script>
+           function movieSelected(id){
+            sessionStorage.setItem('mid',id);
+            window.location = 'movie-details.html';
+            return false;
+           }
+            
+       </script>
+    </body>
+</html>
